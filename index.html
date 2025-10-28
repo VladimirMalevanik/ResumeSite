@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Сайт в разработке</title>
+  <meta name="description" content="Сайт в разработке. Подробная информация появится до 29.10.2025" />
+  <meta name="robots" content="noindex,nofollow" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#8f7aff" />
+  <style>
+    :root{
+      --bg: #0b0b10; --fg:#eaeaf1; --muted:#a6a6b8; --card:#15151e; --border:rgba(255,255,255,.08);
+    }
+    @media (prefers-color-scheme: light){
+      :root{ --bg:#fafafa; --fg:#1a1a20; --muted:#5e5e6a; --card:#ffffff; --border:rgba(0,0,0,.06); }
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Noto Sans",sans-serif;
+      background: radial-gradient(80% 100% at 10% 10%, rgba(143,122,255,.18), transparent 60%),
+                  radial-gradient(80% 100% at 90% 90%, rgba(143,122,255,.12), transparent 60%),
+                  var(--bg);
+      color:var(--fg); display:grid; place-items:center; padding:24px;
+    }
+    .card{
+      width:100%; max-width:720px; padding:28px 28px 24px;
+      background:var(--card); border:1px solid var(--border); border-radius:20px;
+      box-shadow:0 10px 30px rgba(0,0,0,.18);
+      text-align:center;
+    }
+    h1{margin:0 0 8px; font-weight:700; letter-spacing:.2px; font-size:clamp(28px,5vw,40px)}
+    p{margin:0; color:var(--muted); font-size:clamp(16px,2.5vw,18px)}
+  </style>
+</head>
+<body>
+  <main class="card" role="main" aria-label="Сообщение о разработке сайта">
+    <h1>Сайт в разработке</h1>
+    <p>Подробная информация появится до <strong>29.10.2025</strong>.</p>
+  </main>
+
+  <!-- TODO: позже здесь будет список проектов с картинками и ссылками -->
+</body>
+</html>
