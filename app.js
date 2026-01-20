@@ -12,7 +12,7 @@ const PROJECTS = [
   {
     id: "p2",
     title: "Pokoroche bot",
-    cover: "hhttps://www.travelpayouts.com/ru/blog/wp-content/uploads/2020/08/b_telegram_cover.png",
+    cover: "https://avatars.mds.yandex.net/i?id=7ecc82a4b50efe34912b71ed2d165ed5_l-8744112-images-thumbs&n=13",
     description:
       "Первый серьезный и к тому же коллективный проект, написанный в ноябре 2025 в нем я отвечал за написание БД и тестирования. Задача была создать бота, который, будучи добавленным в групповой чат, анализирует сообщения, фильтрует информационный шум и предоставляет пользователям краткую ежедневную сводку по действительно важным упоминаниям и темам.",
     repo: "https://github.com/nikepf/Pokoroche_bot",
