@@ -1,56 +1,49 @@
-/**
- * ТУТ ТЫ МЕНЯЕШЬ ВСЁ ПОД СЕБЯ:
- * title: название проекта
- * cover: ссылка на картинку (локально ./assets/xxx.jpg или URL)
- * description: описание (можно много строк)
- * repo: ссылка на репозиторий
- * tags: массив маленьких тэгов
- */
+
 const PROJECTS = [
   {
     id: "p1",
-    title: "Проект №1",
-    cover: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80",
+    title: "Image Processor",
+    cover: "https://cms.interestingengineering.com/wp-content/uploads/2024/03/Image-of-Lena-Forsen-used-in-many-image-processing-experiments.jpg",
     description:
-      "Здесь будет описание проекта №1.\n\nКоротко: что делает, стек, фичи, результаты.",
-    repo: "https://github.com/USERNAME/REPO1",
-    tags: ["Python", "DL"]
+      "Это мой первый проект в целом, его я писал в марте 2025 года на курсе по С++. Задача была реализовать консольное приложение, позволяющее применять к изображениям различные фильтры, аналогичные фильтрам в популярных графических редакторах.",
+    repo: "https://github.com/VladimirMalevanik/image_processor",
+    tags: ["C++"]
   },
   {
     id: "p2",
-    title: "Проект №2",
-    cover: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80",
+    title: "Pokoroche bot",
+    cover: "hhttps://www.travelpayouts.com/ru/blog/wp-content/uploads/2020/08/b_telegram_cover.png",
     description:
-      "Описание проекта №2.\n\nЧто именно ты сделал(а), чем гордишься, что дальше.",
-    repo: "https://github.com/USERNAME/REPO2",
-    tags: ["C++", "Algorithms"]
+      "Первый серьезный и к тому же коллективный проект, написанный в ноябре 2025 в нем я отвечал за написание БД и тестирования. Задача была создать бота, который, будучи добавленным в групповой чат, анализирует сообщения, фильтрует информационный шум и предоставляет пользователям краткую ежедневную сводку по действительно важным упоминаниям и темам.",
+    repo: "https://github.com/nikepf/Pokoroche_bot",
+    tags: ["Python", "tg_bot", "ML"]
   },
   {
     id: "p3",
-    title: "Проект №3",
-    cover: "https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?auto=format&fit=crop&w=1200&q=80",
+    title: "AntiSpoof",
+    cover: "https://avatars.mds.yandex.net/i?id=bd9d80434b2aa85e8f2d90f9e1e7d91e8780660a-10153545-images-thumbs&n=13",
     description:
-      "Описание проекта №3.\n\nМожно вставлять списки:\n- пункт 1\n- пункт 2",
-    repo: "https://github.com/USERNAME/REPO3",
-    tags: ["Telegram", "Bot"]
+      "Это моя собственноручно написанная модель. Ее я написал на практике по глубинному обучению в июле 2025. Цель была обучить модельку, которая убирала лишние шумы из звуковой дорожки.",
+    repo: "https://github.com/VladimirMalevanik/anti_spoof",
+    tags: ["Python", "DL"]
   },
   {
     id: "p4",
-    title: "Проект №4",
-    cover: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=1200&q=80",
+    title: "Petly Startapp",
+    cover: "https://static.vecteezy.com/system/resources/previews/007/456/149/non_2x/two-funny-cartoon-dogs-comic-animal-characters-vector.jpg",
     description:
-      "Описание проекта №4.\n\nНапиши, для кого это и какую боль решает.",
-    repo: "https://github.com/USERNAME/REPO4",
+      "Данный сайт являлся MVP для нашего студенческого стартапа про умные ошейники. Навайбкодил его в сентябре 2025",
+    repo: "https://github.com/VladimirMalevanik/petly-site",
     tags: ["Web", "Frontend"]
   },
   {
     id: "p5",
-    title: "Проект №5",
+    title: "Умная табличка для дисциплины",
     cover: "https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?auto=format&fit=crop&w=1200&q=80",
     description:
-      "Описание проекта №5.\n\nДобавь метрики/результаты, если есть.",
-    repo: "https://github.com/USERNAME/REPO5",
-    tags: ["Other"]
+      "Ладно, не такая уж она и умная. Написал этого бота, чтобы он помогал людям избавляться от вредных привычек и приобретать полезные, путем улучшения на 1%. Бот выдает табличку как для печати так и excel, за скромную подписку на мой тг канал.",
+    repo: "https://github.com/VladimirMalevanik/schedule",
+    tags: ["Python", "tg_bot"]
   },
 ];
 
