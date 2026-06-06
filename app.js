@@ -210,7 +210,6 @@ function escapeHtml(s) {
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#039;");
 }
-
 function escapeAttr(s) {
   return escapeHtml(s).replaceAll("\n", " ");
 }
