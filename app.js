@@ -53,6 +53,15 @@ const PROJECTS = [
     repo: "https://github.com/VladimirMalevanik/dota2",
     tags: ["Python", "ML", "Dota 2", "scikit-learn", "Optuna"]
   },
+  {
+    id: "p7",
+    title: "ML From Scratch Lab",
+    cover: "https://cs13.pikabu.ru/post_img/2024/02/26/10/og_og_170896470728716114.jpg",
+    description:
+      "Учебный репозиторий с моими реализациями ML-алгоритмов с нуля. В проекте собраны линейная регрессия, аналитическое решение, GD, SGD, SAG, Momentum, Adam, L2-регуляризация, Huber/LogCosh loss, решающее дерево с критерием Джини, bias-variance decomposition, bagging experiments и базовая DL-практика на PyTorch.",
+    repo: "https://github.com/VladimirMalevanik/ml-from-scratch-lab",
+    tags: ["Python", "ML", "NumPy", "PyTorch", "From Scratch"]
+  },
 ];
 
 const $ = (sel) => document.querySelector(sel);
@@ -70,23 +79,33 @@ const modalTags = $("#modalTags");
 
 $("#year").textContent = new Date().getFullYear();
 
-function makeTag(text){
+function makeTag(text) {
   const el = document.createElement("span");
   el.className = "tag";
   el.textContent = text;
   return el;
 }
 
-function cardTemplate(p){
+function makeCardTag(text) {
+  const el = document.createElement("span");
+  el.className = "card__tag";
+  el.textContent = text;
+  return el;
+}
+
+function cardTemplate(p) {
   const card = document.createElement("article");
   card.className = "card";
   card.tabIndex = 0;
   card.setAttribute("role", "button");
   card.setAttribute("aria-label", `Открыть: ${p.title}`);
 
+  const visibleTags = (p.tags || []).slice(0, 2);
+
   card.innerHTML = `
     <div class="card__media">
       <img class="card__img" src="${escapeAttr(p.cover)}" alt="${escapeAttr(p.title)}" loading="lazy"/>
+      <div class="card__tags" aria-hidden="true"></div>
       <div class="card__overlay" aria-hidden="true"></div>
     </div>
     <div class="card__body">
@@ -97,6 +116,9 @@ function cardTemplate(p){
       <div class="pill">Открыть</div>
     </div>
   `;
+
+  const tagsContainer = card.querySelector(".card__tags");
+  visibleTags.forEach((tag) => tagsContainer.appendChild(makeCardTag(tag)));
 
   card.addEventListener("click", () => openModal(p));
   card.addEventListener("keydown", (e) => {
@@ -109,22 +131,22 @@ function cardTemplate(p){
   return card;
 }
 
-function render(list){
+function render(list) {
   grid.innerHTML = "";
-  list.forEach(p => grid.appendChild(cardTemplate(p)));
+  list.forEach((p) => grid.appendChild(cardTemplate(p)));
   empty.classList.toggle("hidden", list.length !== 0);
 }
 
-function openModal(p){
+function openModal(p) {
   modalTitle.textContent = p.title;
   modalDesc.textContent = p.description || "";
   modalImg.src = p.cover || "";
   modalImg.alt = p.title;
 
   modalTags.innerHTML = "";
-  (p.tags || []).forEach(t => modalTags.appendChild(makeTag(t)));
+  (p.tags || []).forEach((t) => modalTags.appendChild(makeTag(t)));
 
-  if (p.repo && p.repo.trim().length > 0){
+  if (p.repo && p.repo.trim().length > 0) {
     modalLink.href = p.repo;
     modalLink.setAttribute("aria-disabled", "false");
   } else {
@@ -139,37 +161,48 @@ function openModal(p){
   closeBtn && closeBtn.focus();
 }
 
-function closeModal(){
+function closeModal() {
   modal.classList.add("hidden");
   document.body.style.overflow = "";
 }
 
 modal.addEventListener("click", (e) => {
   const target = e.target;
-  if (target && target.closest && target.closest("[data-close]")) closeModal();
+  if (target && target.closest && target.closest("[data-close]")) {
+    closeModal();
+  }
 });
 
 document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape" && !modal.classList.contains("hidden")) closeModal();
+  if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+    closeModal();
+  }
 });
 
 search.addEventListener("input", () => {
   const q = search.value.trim().toLowerCase();
-  if (!q) return render(PROJECTS);
 
-  const filtered = PROJECTS.filter(p => {
+  if (!q) {
+    render(PROJECTS);
+    return;
+  }
+
+  const filtered = PROJECTS.filter((p) => {
     const hay = [
       p.title || "",
       p.description || "",
-      ...(p.tags || [])
-    ].join(" ").toLowerCase();
+      ...(p.tags || []),
+    ]
+      .join(" ")
+      .toLowerCase();
+
     return hay.includes(q);
   });
 
   render(filtered);
 });
 
-function escapeHtml(s){
+function escapeHtml(s) {
   return String(s)
     .replaceAll("&", "&amp;")
     .replaceAll("<", "&lt;")
@@ -178,7 +211,7 @@ function escapeHtml(s){
     .replaceAll("'", "&#039;");
 }
 
-function escapeAttr(s){
+function escapeAttr(s) {
   return escapeHtml(s).replaceAll("\n", " ");
 }
 
