@@ -11,7 +11,7 @@ const PROJECTS = [
   {
     id: "p2",
     title: "Pokoroche bot",
-    cover: "https://avatars.mds.yandex.net/i?id=7ecc82a4b50efe34912b71ed2d165ed5_l-8744112-images-thumbs&n=13",
+    cover: "https://static.okko.tv/images/v4/b788aa64-0af7-4627-a749-5915cac55295?presetId=4000&amp;width=1200&amp;height=630&amp;scale=1&amp;quality=80",
     description:
       "Первый серьезный и к тому же коллективный проект, написанный в ноябре 2025 в нем я отвечал за написание БД и тестирования. Задача была создать бота, который, будучи добавленным в групповой чат, анализирует сообщения, фильтрует информационный шум и предоставляет пользователям краткую ежедневную сводку по действительно важным упоминаниям и темам.",
     repo: "https://github.com/nikepf/Pokoroche_bot",
@@ -20,7 +20,7 @@ const PROJECTS = [
   {
     id: "p3",
     title: "AntiSpoof",
-    cover: "https://avatars.mds.yandex.net/i?id=bd9d80434b2aa85e8f2d90f9e1e7d91e8780660a-10153545-images-thumbs&n=13",
+    cover: "https://cdn.corporatefinanceinstitute.com/assets/spoofing.jpeg",
     description:
       "Это моя собственноручно написанная модель. Ее я написал на практике по глубинному обучению в июле 2025. Цель была обучить модельку, которая убирала лишние шумы из звуковой дорожки.",
     repo: "https://github.com/VladimirMalevanik/anti_spoof",
@@ -49,7 +49,7 @@ const PROJECTS = [
     title: "Dota 2 Early-Game Win Predictor",
     cover: "https://irecommend.ru/sites/default/files/product-images/3006309/xaDjQyMsUaCYn2R04gHEQ.jpg",
     description:
-      "ML-пет-проект для предсказания победы команды Radiant в матче Dota 2 по данным первых 15 минут игры. В проекте собран пайплайн для бинарной классификации: EDA, feature engineering, валидация по времени, Target Encoding для региона, обработка avg_mmr, кастомный HeroesEncoder для разреженного кодирования пиков героев, Logistic Regression, метрика ROC-AUC/Gini и подбор гиперпараметров через Optuna.",
+      "Никогда не играл в Доту, но представляю вам свою домашку aka ML-пет-проект для предсказания победы команды Radiant в матче Dota 2 по данным первых 15 минут игры. В проекте собран пайплайн для бинарной классификации: EDA, feature engineering, валидация по времени, Target Encoding для региона, обработка avg_mmr, кастомный HeroesEncoder для разреженного кодирования пиков героев, Logistic Regression, метрика ROC-AUC/Gini и подбор гиперпараметров через Optuna.",
     repo: "https://github.com/VladimirMalevanik/dota2",
     tags: ["Python", "ML", "Dota 2", "scikit-learn", "Optuna"]
   },
