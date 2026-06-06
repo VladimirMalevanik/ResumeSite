@@ -60,7 +60,7 @@ const PROJECTS = [
     description:
       "Учебный репозиторий с моими реализациями ML-алгоритмов с нуля. В проекте собраны линейная регрессия, аналитическое решение, GD, SGD, SAG, Momentum, Adam, L2-регуляризация, Huber/LogCosh loss, решающее дерево с критерием Джини, bias-variance decomposition, bagging experiments и базовая DL-практика на PyTorch.",
     repo: "https://github.com/VladimirMalevanik/ml-from-scratch-lab",
-    tags: ["Python", "ML", "NumPy", "PyTorch", "From Scratch"]
+    tags: ["DL", "ML", "NumPy","Python", "PyTorch"]
   },
 ];
 
