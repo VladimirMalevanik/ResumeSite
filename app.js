@@ -1,4 +1,3 @@
-
 const PROJECTS = [
   {
     id: "p1",
@@ -44,6 +43,15 @@ const PROJECTS = [
       "Ладно, не такая уж она и умная. Написал этого бота, чтобы он помогал людям избавляться от вредных привычек и приобретать полезные, путем улучшения на 1%. Бот выдает табличку как для печати так и excel, за скромную подписку на мой тг канал.",
     repo: "https://github.com/VladimirMalevanik/schedule",
     tags: ["Python", "tg_bot"]
+  },
+  {
+    id: "p6",
+    title: "Dota 2 Early-Game Win Predictor",
+    cover: "https://irecommend.ru/sites/default/files/product-images/3006309/xaDjQyMsUaCYn2R04gHEQ.jpg",
+    description:
+      "ML-пет-проект для предсказания победы команды Radiant в матче Dota 2 по данным первых 15 минут игры. В проекте собран пайплайн для бинарной классификации: EDA, feature engineering, валидация по времени, Target Encoding для региона, обработка avg_mmr, кастомный HeroesEncoder для разреженного кодирования пиков героев, Logistic Regression, метрика ROC-AUC/Gini и подбор гиперпараметров через Optuna.",
+    repo: "https://github.com/VladimirMalevanik/dota2",
+    tags: ["Python", "ML", "Dota 2", "scikit-learn", "Optuna"]
   },
 ];
 
@@ -127,7 +135,6 @@ function openModal(p){
   modal.classList.remove("hidden");
   document.body.style.overflow = "hidden";
 
-  // фокус на крестик
   const closeBtn = modal.querySelector("[data-close]");
   closeBtn && closeBtn.focus();
 }
